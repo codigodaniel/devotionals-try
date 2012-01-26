@@ -1,0 +1,13 @@
+<h1>Listing by date</h1>
+
+<p>
+    Devotionals for the date: {{month}}/{{day}}/{{year}} 
+</p>
+{%for object in object_list%}
+<p>
+    <h2>{{object.title}}</h2>
+    <i>{{object.date}}</i>
+    <h3>This have {{object.lar}} word{{ object.lar|pluralize }}.</h3>
+    <p>{{object.body|safe}}</p>
+</p>
+{%endfor%}
